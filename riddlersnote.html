@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Me This...</title>
+    <style>
+        /* Riddler Karanlık Tema Ayarları */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #050806; /* Çok koyu yeşil-siyah */
+            color: #20c20e; /* Riddler Yeşili */
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+        }
+
+        /* Arka plana silik soru işaretleri ekleyerek atmosferi güçlendirelim */
+        body::before {
+            content: "? ? ? ? ? ? ? ? ? ?";
+            position: absolute;
+            top: 10%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 5rem;
+            opacity: 0.05;
+            letter-spacing: 50px;
+            pointer-events: none;
+        }
+
+        .code-container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid rgba(32, 194, 14, 0.2);
+            background: rgba(0, 20, 0, 0.5);
+            box-shadow: 0 0 20px rgba(32, 194, 14, 0.1);
+            max-width: 90%;
+        }
+
+        pre {
+            font-size: 1.2rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            text-shadow: 0 0 8px #20c20e;
+            margin: 0;
+        }
+
+        /* İmleç yanıp sönme efekti */
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 20px;
+            background-color: #20c20e;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="code-container">
+        <pre>#!/usr/bin/env python3
+print(''.join(chr(i) for i in [106, 117, 115, 116, 112, 97, 115, 116, 101, 46, 105, 116, 47, 109, 51, 106, 97, 53]))<span class="cursor"></span></pre>
+    </div>
+
+</body>
+</html>
